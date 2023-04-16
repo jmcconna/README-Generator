@@ -67,75 +67,78 @@ function writeToFile(fileName, data) {
 
     let READMEtext = ""; //create an empty string to start writing the README file
 
-    READMEtext = READMEtext + "# " + data.title +"\n" + "\n";
+    READMEtext += "# " + data.title +"\n" + "\n";
 
-    READMEtext = READMEtext + "## Description" + '\n' + data.description + "\n" +"\n";
+    READMEtext += "## Description" + '\n' + data.description + "\n" +"\n";
 
-    READMEtext = READMEtext + "## Installation" + '\n' + data.installation + "\n" +"\n";
+    //build the table of contents
+    READMEtext += "## Table of Contents" + '\n\n' + "- [Installation](#installation)" + '\n' + "- [Usage Information](#usage)" + '\n' + "- [Contribution Guidelines](#contribution)" + '\n' + "- [Test Instructions](#test)" + '\n' + "- [License](#license)" + '\n' + "- [Questions](#questions)" + '\n\n';
 
-    READMEtext = READMEtext + "## Usage Information" + '\n' + data.usage + "\n" +"\n";
+    READMEtext += "## Installation" + '\n' + data.installation + "\n" +"\n";
+
+    READMEtext += "## Usage Information" + '\n' + data.usage + "\n" +"\n";
     
-    READMEtext = READMEtext + "## Contribution Guidelines" + '\n' + data.contribution + "\n" +"\n";
+    READMEtext += "## Contribution Guidelines" + '\n' + data.contribution + "\n" +"\n";
     
-    READMEtext = READMEtext + "## Test Instructions" + '\n' + data.test + "\n" +"\n";
+    READMEtext += "## Test Instructions" + '\n' + data.test + "\n" +"\n";
     
-    READMEtext = READMEtext + "## License" + '\n' + data.license +"\n";
-    console.log(data.license);
+    READMEtext += "## License" + '\n';
 
     //add license badges, based on the license chosen
         switch(data.license[0]) {
             case licenses[0]:
-                console.log("Inside the first case");
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
                 break;
             case licenses[1]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
+                READMEtext += "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
                 break;
             case licenses[2]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
                 break;
             case licenses[3]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)"
                 break;
             case licenses[4]:
-                READMEtext = READMEtext + "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+                READMEtext += "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
                 break;
             case licenses[5]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
                 break;
             case licenses[6]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
                 break;
             case licenses[7]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
                 break;
             case licenses[8]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
                 break;
             case licenses[9]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
                 break;
             case licenses[10]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
                 break;
             case licenses[11]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
                 break;
             case licenses[12]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
                 break;
             case licenses[13]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
                 break;
             case licenses[14]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
                 break;
             case licenses[15]:
-                READMEtext = READMEtext + "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
                 break;
         }
+
+    READMEtext += data.license +"\n";
     
-    READMEtext = READMEtext +  "\n\n## Questions" + '\nMessage me on Github:' + data.username  +"\nShoot me an email:" + data.email +"\n";
+    READMEtext +=  "\n\n## Questions" + '\nMessage me on Github: ' + data.username  +"\n" + "Shoot me an email:" + data.email +"\n";
 
         //create new file and stuff all that README goodness into it
         fs.writeFile(fileName, READMEtext, (err) => err ? console.log(err) : console.log('Success!'));
