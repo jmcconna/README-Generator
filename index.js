@@ -136,9 +136,9 @@ function writeToFile(fileName, data) {
                 break;
         }
 
-    READMEtext += " " + data.license +"\n";
+    READMEtext += "\n" + data.license +"\n";
     
-    READMEtext +=  "\n\n## Questions" + '\nMessage me on Github: ' + data.username  +"\n\n" + "Shoot me an email: " + data.email +"\n";
+    READMEtext +=  "\n\n## Questions" + '\nMessage me on Github: ' + data.username  +"\n\n" + "\nShoot me an email: " + data.email +"\n";
 
         //create new file and stuff all that README goodness into it
         fs.writeFile(fileName, READMEtext, (err) => err ? console.log(err) : console.log('Success!'));
