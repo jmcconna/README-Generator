@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+//Include packages needed for this application
 const inquirer = require("inquirer"); //include inquierer package
 const fs = require("fs"); //include the file system package
 const licenses = ['Apache 2.0 License','Boost Software License 1.0','BSD 3-Clause License', 'Eclipse Public License 1.0', 'GNU GPL v3', 'IBM Public License Version 1.0', 'ISC License', 'The MIT License', 'Mozilla Public License 2.0', 'Open Data Commons Attribution License (BY)','The PERL License', 'The Artistic License 2.0','SIL Open Font License 1.1','The Unlicense', 'WTFPL', 'The zlib/libpng License'];
 
-// TODO: Create an array of questions for user input
+//Create an array of questions for user input
 const questions = [
 //enter project title
 {
@@ -62,7 +62,7 @@ message: 'Enter your email address:',
 },
 ];
 
-// TODO: Create a function to write README file
+//Create a function to write README file
 function writeToFile(fileName, data) {
 
     let READMEtext = ""; //create an empty string to start writing the README file
@@ -102,37 +102,37 @@ function writeToFile(fileName, data) {
                 READMEtext += "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
                 break;
             case licenses[5]:
-                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)"
                 break;
             case licenses[6]:
-                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)"
                 break;
             case licenses[7]:
-                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
                 break;
             case licenses[8]:
-                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
                 break;
             case licenses[9]:
-                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License: Open Data Commons Attribution](https://img.shields.io/badge/License-ODC_BY-brightgreen.svg)](https://opendatacommons.org/licenses/by/)"
                 break;
             case licenses[10]:
-                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)"
                 break;
             case licenses[11]:
-                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)"
                 break;
             case licenses[12]:
-                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)"
                 break;
             case licenses[13]:
-                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
                 break;
             case licenses[14]:
-                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)"
                 break;
             case licenses[15]:
-                READMEtext += "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+                READMEtext += "[![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)"
                 break;
         }
 
